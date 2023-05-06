@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>button</title>
+    <style>
+        .btn{
+            display: flex;
+            justify-content: center;
+            height: 100vh;
+            align-items: center;
+        }
+        button {
+            background-color: aqua;
+            padding: 7px 14px 9px 14px;
+            border: none;
+            font-size: 30px;
+            cursor: pointer;
+            border-radius: 24px 24px 24px 24px;
+        }
+    </style>
+</head>
+<body>
+    <div class="btn">
+        <button onclick="colorChange()">click here</button>
+    </div>
+    <script>
+        var index = 0;
+        function colorChange (){
+            var color =["rgb(233, 102, 102)","rgb(102, 102, 233)","rgb(148, 231, 52)","rgb(245, 245, 95)"];
+            document.getElementsByTagName('body')[0].style.background = color[index++];
+            if(index > color.length -1){
+                index = 0;
+            }
+        }
+
+    </script>
+</body>
+</html>
